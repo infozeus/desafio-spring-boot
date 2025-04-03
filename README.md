@@ -3,7 +3,7 @@
 La empresa NUEVO SPA desea desarrollar una plataforma de gestión de tareas para mejorar la productividad de sus equipos. El sistema debe permitir a los usuarios crear, actualizar, eliminar y listar tareas. Además, se requiere autenticación mediante JWT y documentación de la API utilizando OpenAPI y Swagger.
 
 ## Objetivo:
-Crear una API RESTful utilizando Spring Boot 2.7.x que gestione usuarios y tareas, aplicando buenas prácticas, principios SOLID y utilizando las tecnologías especificadas.
+Crear una API RESTful utilizando Spring Boot que gestione usuarios y tareas, aplicando buenas prácticas, principios SOLID y utilizando las tecnologías especificadas.
 
 ## Requisitos Técnicos:
 ### Java:
@@ -11,8 +11,8 @@ Crear una API RESTful utilizando Spring Boot 2.7.x que gestione usuarios y tarea
 - Utiliza las características de Java 17, como lambdas y streams, cuando sea apropiado.
 - Utilizar Maven como gestor de dependencias
 
-### Spring Boot 2.7.x:
-- Construye la aplicación utilizando Spring Boot 2.7.x (última versión disponible).
+### Spring Boot 3.4.x:
+- Construye la aplicación utilizando Spring Boot 3.4.x (última versión disponible).
 
 ### Base de Datos:
 
@@ -67,6 +67,6 @@ Se evaluará la solución en función de los siguientes criterios:
 
 - Correcta implementación de las funcionalidades solicitadas.
 - Aplicación de buenas prácticas de desarrollo, patrones de diseño y principios SOLID.
-- Uso adecuado de Java 17, Spring Boot 2.7.x, H2, JWT, OpenAPI y Swagger.
+- Uso adecuado de Java 17, Spring Boot 3.4.x, H2, JWT, OpenAPI y Swagger.
 - Claridad y completitud de la documentación.
 - **Puntos extras si la generación de la API se realizo mediante API First**
