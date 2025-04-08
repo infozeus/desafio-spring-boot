@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MTA3OTYxODksImV4cCI6MTcxMTY2MDE4OX0.5Yn5eGTQLyX7m2TH7tzYCVuUBvoW7LBFQn16UJLyJ0AqxSVm-9roSZwaPktq9dLnFHSuzM0dllMj86Ahrb4-Gw",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQwNjExMzAsImV4cCI6MTc0NDkyNTEzMH0.zrhBb5d7IsxKGqj1YxDRD0CrS_aP5b38LVKSK8Lh1L6uDYqDBGdJaA3cMd6BhCNRN4ZGy749-yOejD4mXq4Liw",
 							"type": "string"
 						}
 					]
@@ -22,14 +22,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/tareas/getAllTasks",
+					"raw": "localhost:8080/tareas/all",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"tareas",
-						"getAllTasks"
+						"all"
 					]
 				}
 			},
@@ -71,7 +71,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MTA1NDA5MTQsImV4cCI6MTcxMTQwNDkxNH0.czL9AFAWoypzQSPNIMIUellHPeiskjRLOujejomq2rIRQDPtRISBlQrUyJHoGeEkWOYVjgPJmoID6LNEntq6iQ",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQxNDM0NTYsImV4cCI6MTc0NTAwNzQ1Nn0.jV31sCFgCJKdrjjBBwuXqnzrXmycGsWaVE3M9nTaE9EG6MiM0hPMiTZib2TTLhY7ruCpnPvBX80A7U71Yg1MFA",
 							"type": "string"
 						}
 					]
@@ -79,7 +79,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/",
+					"raw": "http://localhost:8080/users/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -87,7 +87,7 @@
 					"port": "8080",
 					"path": [
 						"users",
-						""
+						"all"
 					]
 				}
 			},
@@ -96,17 +96,27 @@
 		{
 			"name": "Eliminar Tareas",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQxNDg1MjEsImV4cCI6MTc0NTAxMjUyMX0.g397sNBULfvRKPcwNwSk6vfsKry0_6CBO2nCv-vqzugyY7aNPx5kt1m1LjeFiq02tw9FSmVP3FhMswdRmzD_HQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/tareas/{id}",
+					"raw": "localhost:8080/tareas/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"tareas",
-						"{id}"
+						"1"
 					]
 				}
 			},
@@ -115,30 +125,57 @@
 		{
 			"name": "Buscar Tareas por Id",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQxNDg1MjEsImV4cCI6MTc0NTAxMjUyMX0.g397sNBULfvRKPcwNwSk6vfsKry0_6CBO2nCv-vqzugyY7aNPx5kt1m1LjeFiq02tw9FSmVP3FhMswdRmzD_HQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/tareas/{id}",
+					"raw": "localhost:8080/tareas/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"tareas",
-						"{id}"
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Agregar Tarea",
+			"name": "Actualizar Tarea",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQxNDg1MjEsImV4cCI6MTc0NTAxMjUyMX0.g397sNBULfvRKPcwNwSk6vfsKry0_6CBO2nCv-vqzugyY7aNPx5kt1m1LjeFiq02tw9FSmVP3FhMswdRmzD_HQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"descripcion\": \"string\",\n  \"id\": 0,\n  \"statusId\": 0\n}",
+					"raw": "{\n  \"descripcion\": \"string\",\n  \"estado\": {\n    \"id\": \"string\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -154,6 +191,82 @@
 					"path": [
 						"tareas",
 						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Tarea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQxNDg1MjEsImV4cCI6MTc0NTAxMjUyMX0.g397sNBULfvRKPcwNwSk6vfsKry0_6CBO2nCv-vqzugyY7aNPx5kt1m1LjeFiq02tw9FSmVP3FhMswdRmzD_HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"descripcion\": \"Tarea 1\",\n  \"estado\": {\n    \"status\": \"INICIADA\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tareas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJqeWFuZXpKV1QiLCJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDQxNDg1MjEsImV4cCI6MTc0NTAxMjUyMX0.g397sNBULfvRKPcwNwSk6vfsKry0_6CBO2nCv-vqzugyY7aNPx5kt1m1LjeFiq02tw9FSmVP3FhMswdRmzD_HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user\": \"jyanez\",\n  \"pass\": \"123458\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						""
 					]
 				}
 			},

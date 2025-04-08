@@ -1,4 +1,4 @@
-package com.nuevospa.taskmanager.application;
+package com.nuevospa.taskmanager.application.service.impl;
 
 import com.nuevospa.taskmanager.domain.model.Usuarios;
 import com.nuevospa.taskmanager.domain.repository.UsuariosRepository;

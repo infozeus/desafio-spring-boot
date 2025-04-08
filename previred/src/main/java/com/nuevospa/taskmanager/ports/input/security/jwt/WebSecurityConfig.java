@@ -22,10 +22,11 @@ class WebSecurityConfig{
 
         http
                 .csrf(AbstractHttpConfigurer::disable)
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .authorizeHttpRequests( authz -> authz
-                        .antMatchers(HttpMethod.POST, "/login", "/user", "/task").permitAll()
-                        .antMatchers(HttpMethod.GET, "/swagger-ui/**","/v2/api-docs/**", "/h2-console/**", "/api-docs/**", "/swagger**").permitAll()
-                        .antMatchers("/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/configuration/**", "/h2-console/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login", "/user", "/task").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/swagger-ui/**", "/v3/api-docs/**", "/h2-console/**", "/api-docs/**", "/swagger**").permitAll()
+                        .requestMatchers("/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/configuration/**", "/h2-console/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .anyRequest().authenticated())
                 .addFilterAfter(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
 
